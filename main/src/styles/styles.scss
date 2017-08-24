@@ -1,0 +1,19 @@
+@mixin flexbox { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; }
+@mixin flexbox_inline { display: -webkit-inline-box; display: -moz-inline-box; display: -ms-inline-flexbox; display: -webkit-inline-flex; display: inline-flex; }
+@mixin flexbox_column { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; align-items: center; flex-direction: column; }
+@mixin flexbox_center { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; align-items: center; justify-content: center; }
+@mixin widen_icon { transform: scale(1.8, 1); -webkit-transform: scale(1.8, 1); -moz-transform: scale(1.8, 1); -ms-transform: scale(1.8, 1); -o-transform: scale(1.8, 1); 
+	@media only screen and (min-width : 768px) and (orientation: portrait) {
+		transform: scale(2.1, 1); -webkit-transform: scale(2.1, 1); -moz-transform: scale(2.1, 1); -ms-transform: scale(2.1, 1); -o-transform: scale(2.1, 1); 
+	}
+}
+@mixin fade_opacity { -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
+
+@font-face {font-family: champ-b; src: url('../assets/fonts/champagne_limousinesbold.ttf');}
+@font-face {font-family: champ-r; src: url('../assets/fonts/champagnelimousines.ttf');}
+@font-face {font-family: bebas; src: url('../assets/fonts/MaisonNeue-Bold.otf');}
+@font-face {font-family: MaisonN_M; src: url('../assets/fonts/MaisonNeue-Medium.otf');}
+@font-face {font-family: MaisonN_B; src: url('../assets/fonts/MaisonNeue-Bold.otf');}
+@font-face {font-family: MaisonNW_B; src: url('../assets/fonts/MaisonNeueWEB-Book.woff');}
+
+@import "fonts";

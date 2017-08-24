@@ -1,0 +1,55 @@
+body, html { width: 300px; height: 250px; padding: 0; margin: 0 auto; position: relative; overflow: hidden; }
+body { border: solid 1px #000; font-family: Arial, Helvetica, sans-serif; }
+
+@mixin opacity_fade($time) { -webkit-transition: opacity $time ease-in; transition: opacity $time ease-in; -moz-transition: opacity $time ease-in; -ms-transition: opacity $time ease-in; -o-transition: opacity $time ease-in; }
+@mixin zoom_in($time) { 
+    -webkit-transition: width $time ease-out, height $time ease-out, margin $time ease-out; 
+    transition: width $time ease-out, height $time ease-out, margin $time ease-out; 
+    -moz-transition: width $time ease-out, height $time ease-out, margin $time ease-out; 
+    -ms-transition: width $time ease-out, height $time ease-out, margin $time ease-out; 
+    -o-transition: width $time ease-out, height $time ease-out, margin $time ease-out; 
+}
+
+// .bgr { width: 100%; height: 100%; background-image: url('../img/bgr1.jpg'); background-size: 300px 250px; background-position: 0px 0px;
+    // -webkit-transition: background-size 1s; transition: background-size 1s; -moz-transition: background-size 1s; -ms-transition: background-size 1s; -o-transition: background-size 1s;
+    // -webkit-transition: background-position 1s; transition: background-position 1s;
+    // &.zoomed { background-size: 611px 510px; background-position: -129px -77px; }
+// }
+
+.bgr { width: 100%; height: 100%; background: url('../img/perfume.jpg') no-repeat; background-size: contain; background-position: 0px 0px; 
+    -webkit-transition: width 0s, height 0s, margin 0s; transition: width 0s, height 0s, margin 0s; -moz-transition: width 0s, height 0s, margin 0s; -ms-transition: width 0s, height 0s, margin 0s; -o-transition: width 0s, height 0s, margin 0s;
+    &.zoomed { 
+        @include zoom_in(0.5s);
+        width: 200%; height: 200%; margin: -77px 0 0 -77px; }
+}
+
+.overlay_w { width: 100%; height: 100%; background-color: #fff; position: absolute; bottom: 0; left: 0; opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in; transition: opacity 0.5s ease-in; -moz-transition: opacity 0.5s ease-in; -ms-transition: opacity 0.5s ease-in; -o-transition: opacity 0.5s ease-in;
+    &.visible { opacity: 0.75; }
+}
+
+.PI_exit { height: auto; cursor: pointer; z-index: 1; position: absolute; bottom: 0; opacity: 0.5; width: 100%; height: 70px; z-index: 10; }
+.mailto_exit { height: auto; cursor: pointer; z-index: 1; position: absolute; top: 0; opacity: 0.5; width: 100%; height: 180px; z-index: 10; display: none; }
+.mailto { width: 300px; height: 180px; position: absolute; }
+
+// ========================= sprites vv
+
+.sprite { background-image: url('../img/spritesheet.png'); background-repeat: no-repeat; display: block; position: absolute; }
+.non_sprite { background-repeat: no-repeat; display: block; position: absolute; }
+
+.plainLogo_k { width: 64px; height: 11px; position: absolute; top: 15px; left: 15px; font-size: 15px; color: #000; }
+.plainLogo_b { width: 65px; height: 11px; position: absolute; top: 15px; left: 15px; opacity: 0; font-size: 15px; color: hotpink; @include opacity_fade(0.5s); }
+
+.copy_W_for_UK_healthcare { width: 183px; height: 20px; background-position: -5px -5px; top: 0; right: 0; }
+
+.copy_for_UK_healthcare { width: 171px; height: 10px; background-position: -198px -5px; top: 4px; right: 4px; opacity: 0; @include opacity_fade(0.2s); }
+
+.copy_watch_expert { width: 220px; height: 24px; background-position: -198px -25px; top: 62px; left: 50px; display: none; }
+
+.fgr1 { width: 300px; height: 234px; background-position: -5px -59px; bottom: 0; z-index: 5; }
+.pg2 { width: 276px; height: 73px; background-position: -5px -303px; display: none; top: 92px; left: 15px; z-index: 6; }
+.pg3 { width: 276px; height: 73px; background-position: -428px -5px; display: none; top: 92px; left: 15px; z-index: 6; }
+.pg4 { width: 276px; height: 73px; background-position: -315px -88px; display: none; top: 92px; left: 15px; z-index: 6; }
+.pg5 { width: 213px; height: 90px; background-position: -315px -171px; display: none; top: 66px; left: 40px; z-index: 6; }
+
+// ========================== end of sprites ^^

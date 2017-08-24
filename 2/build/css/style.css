@@ -1,0 +1,135 @@
+body, html {
+  width: 160px;
+  height: 600px;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; }
+
+body {
+  border: solid 1px #000; }
+
+.bgr {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bgr1.jpg");
+  background-size: contain;
+  background-position: 0px 0px;
+  -webkit-transition: width 0s, height 0s, margin 0s;
+  transition: width 0s, height 0s, margin 0s;
+  -moz-transition: width 0s, height 0s, margin 0s;
+  -ms-transition: width 0s, height 0s, margin 0s;
+  -o-transition: width 0s, height 0s, margin 0s; }
+  .bgr.zoomed {
+    -webkit-transition: width 0.8s ease-out, height 0.8s ease-out, margin 0.8s ease-out;
+    transition: width 0.8s ease-out, height 0.8s ease-out, margin 0.8s ease-out;
+    -moz-transition: width 0.8s ease-out, height 0.8s ease-out, margin 0.8s ease-out;
+    -ms-transition: width 0.8s ease-out, height 0.8s ease-out, margin 0.8s ease-out;
+    -o-transition: width 0.8s ease-out, height 0.8s ease-out, margin 0.8s ease-out;
+    width: 280%;
+    height: 280%;
+    margin: -259px 0 0 -141px; }
+
+.overlay_w {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -ms-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in; }
+  .overlay_w.visible {
+    opacity: 0.75; }
+
+.PI_exit_cont {
+  width: 100%;
+  height: 170px;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+.PI_exit {
+  height: auto;
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  opacity: 0.5;
+  width: 100%;
+  height: 170px;
+  z-index: 10; }
+
+.mailto_exit {
+  height: auto;
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+  width: 160px;
+  height: 430px;
+  z-index: 10;
+  display: none; }
+
+.mailto {
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+
+.sprite {
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute; }
+
+.abbvieLogo_w {
+  background-position: -250px -558px;
+  width: 64px;
+  height: 11px;
+  position: absolute;
+  top: 15px;
+  left: 16px; }
+
+.abbvieLogo_b {
+  background-position: -250px -577px;
+  width: 64px;
+  height: 14px;
+  position: absolute;
+  top: 14px;
+  left: 17px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -ms-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in; }
+
+.fgr1 {
+  width: 160px;
+  height: 593px;
+  background-position: -5px -5px;
+  bottom: 0;
+  z-index: 5; }
+
+.pg2 {
+  width: 137px;
+  height: 245px;
+  background-position: -175px -5px;
+  display: none;
+  top: 140px;
+  left: 10px;
+  z-index: 6; }
+
+.pg3 {
+  width: 149px;
+  height: 236px;
+  background-position: -175px -260px;
+  display: none;
+  top: 175px;
+  left: 5px;
+  z-index: 6; }
